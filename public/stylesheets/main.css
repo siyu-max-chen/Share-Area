@@ -4,6 +4,10 @@ body {
 	/* font-family: 'Roboto Condensed', sans-serif; */
 }
 
+
+/* =======================================================
+  NAVBAR
+======================================================= */
 .navbar {
 	/* position: fixed; */
 	left: 0;
@@ -19,6 +23,30 @@ body {
 .navbar-text {
   color: #dddddd;
   display: block;
+}
+
+.nav-footer {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  display: flex;
+  border-color: #eef1f6;
+  border-top-style: solid;
+  border-top-width: 1px;
+  
+  position: fixed;
+  bottom: 0;
+  color: #586069!important;
+  background: #f5f6f5;
+}
+
+.nav-footer-item-right {
+  font-family: 'Be Vietnam', sans-serif;
+  float: right;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.6rem;
 }
 
 .navbar-text:hover {
@@ -151,10 +179,25 @@ body {
 	display: inline;
 }
 
-/* =========   REGISTER FORM   =============== */
+/* =======================================================
+    FORM
+======================================================= */
 /* register: log in/sign up div */
+.form-page {
+	background: #eceff1;
+}
+
 .register-container {
 	width: 40%;
+  margin: 3% auto;
+	background: white;
+	padding: 25px auto;
+	border-radius: 5px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.container-form-sharea {
+	width: 100%;
   margin: 3% auto;
 	background: white;
 	padding: 25px auto;
@@ -166,16 +209,12 @@ body {
 	padding: 20px 0 33px 0;
 }
 
-.register-title {
+.form-title {
 	margin: 30px auto;
 }
 
 .register-item {
 	margin: 25px auto;
-}
-
-.register-page {
-	background: #eceff1;
 }
 
 .normal-link {
