@@ -1,0 +1,52 @@
+<% include ../partials/header %>
+
+<div class="row">
+	<div class="col-md-4">
+		<div class="card align-items-center justify-content-center">
+			<h4><%= user.username %></h4>
+			<img class="avatar-profile" src="<%= user.avatar %>" alt="user profile image">
+			<p>First Name: 
+				<% if(user.firstName && user.firstName.length() > 0){ %>
+					<%= user.firstName %>
+				<% } else { %>
+					<%= "-" %>
+				<% } %>
+			</p>
+			<p>Last Name: 
+				<% if(user.lastName && user.lastName.length() > 0){ %>
+					<%= user.lastName %>
+				<% } else { %>
+					<%= "-" %>
+				<% } %>
+			</p>
+
+			<div class="caption"><a href="mailto<%= user.email %>"><%= user.email %></a></div>
+		</div> 
+		 
+	</div>
+	<div class="col-md-8">
+		
+		
+		<% campgrounds.forEach(function(campground){  %>
+			<div class="card mb-3" style="max-width: 100%; margin: 20px;">
+				<div class="row no-gutters">
+					
+					<div class="col-md-4" style="margin:auto auto;">
+						<img src="<%= campground.image %>" class="card-img" alt="<%= campground.name  %>">
+					</div>
+					
+					<div class="col-md-8">
+						<div class="card-body" style="margin:30px auto;">
+							<h5 class="card-title"><%= campground.name  %></h5>
+							<p class="card-text text-muted"><%= campground.description.substring(0, 50) %>...</p>
+							<a href="/campgrounds/<%= campground._id %>" class="btn btn-primary float-right title-text">More Info</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		<% }) %>
+	</div>
+</div>
+
+<% include ../partials/footer %>

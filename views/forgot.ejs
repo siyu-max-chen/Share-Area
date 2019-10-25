@@ -1,0 +1,51 @@
+<% include ./partials/header %>
+
+<body class="register-page">
+	<div class="container register-container" style="text-align: center;">
+			<div class="container register-form">
+				<div class="text-center register-title">
+					<h1 class="special-title">Reset</h1>
+				</div>
+				<hr>
+				
+				<div class="card w-75" style="margin:25px auto; background-color: #ffffe0; border: 1px solid #e6db55;     padding: 5px 5px 5px 5px;">
+					<div class="card-body">
+						<p class="card-text">
+							Forgotten your password? Enter your e-mail address below, and we'll send you an e-mail allowing you to reset it.
+						</p>
+					</div>
+				</div>
+
+				<form action="/forgot" method="POST">
+
+						<div class="form-group register-item">
+								<input type="email" name="email" autofocus class="form-control" placeholder="E-mail address" required>
+						</div>
+
+						<div class="form-group register-item">
+								<input type="submit" class="btn btn-lg btn-primary btn-block btn-form title-text" value="Reset Password">
+						</div>
+					
+				</form>
+				
+		</div>
+	</div>
+</body>
+
+	<!-- <div class="row">
+		<div class="col-md-12">
+			<form action="/forgot" method="POST">
+				<legend>Forgot Password</legend>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" name="email" autofocus class="form-control">
+				</div>
+				
+				<div class="form-group">
+					<input type="submit" class="btn btn-primary" value="Reset Password">
+				</div>
+				
+			</form>
+		</div>
+	</div> -->
+<% include ./partials/footer %>

@@ -1,0 +1,29 @@
+<% include ./partials/header %>
+
+<body class="register-page">
+	<div class="container register-container" style="text-align: center;">
+			<div class="container register-form">
+				<div class="text-center register-title">
+					<h1 class="special-title">Reset</h1>
+				</div>
+				<hr>
+				
+				<form action="/reset/<%= token %>" method="POST">
+						<div class="form-group register-item">
+								<input type="password" name="password" autofocus class="form-control" placeholder="New password" required value="">
+						</div>
+					
+						<div class="form-group">
+							<input type="password" name="confirm" value="" placeholder="Confirm password" class="form-control" required/>
+						</div>
+
+						<div class="form-group register-item">
+								<button type="submit" class="btn btn-lg btn-primary btn-block btn-form title-text">Update Password</button>
+						</div>
+					
+				</form>
+		</div>
+	</div>
+</body>
+
+<% include ./partials/footer %>
